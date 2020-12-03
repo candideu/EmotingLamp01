@@ -64,10 +64,10 @@ int ledRED = 12;
 int ledGREEN = 11;
 int ledBLUE = 10;
 int ledYELLOW = 9;
-int ledRED1 = 5; 
+int ledYELLOW1 = 6; 
 int brightness = 0;    // how bright the LED is
 int fadeAmount = 5;    // how many points to fade the LED by
-int buttonPin = 6;    //pushbtton pin
+int buttonPin = 13;    //pushbtton pin
 int buttonState = 0;
 int Mode = 0;                 //mode of LED flashing
 int lastButtonState = 0;     // previous state of the button
@@ -88,7 +88,7 @@ void setup() {
   pinMode(ledGREEN, OUTPUT);
   pinMode(ledBLUE, OUTPUT);
   pinMode(ledYELLOW, OUTPUT);
-  pinMode(ledRED1, OUTPUT);
+  pinMode(ledYELLOW1, OUTPUT);
   pinMode(buttonPin, INPUT);
 
 
@@ -124,11 +124,11 @@ sendReceiveMessages(serverCheckRate);
     break;
   case 2:
     //fade blue+red=purple
-    analogWrite(ledBLUE, 255);
+    analogWrite(ledRED, 255);
     delay(100);
-    fade_led(ledRED);
+    fade_led(ledBLUE);
     change_mode();
-    analogWrite(ledBLUE, LOW);
+    analogWrite(ledRED, LOW);
     delay(100);
     change_mode();
     break;
@@ -137,6 +137,26 @@ sendReceiveMessages(serverCheckRate);
     analogWrite(ledYELLOW, 255);
     delay(100);
     fade_led(ledRED);
+    change_mode();
+    analogWrite(ledYELLOW, LOW);
+    delay(100);
+    change_mode();
+    break;
+        case 4:
+    //fade yellow
+    analogWrite(ledYELLOW1, 255);
+    delay(100);
+    fade_led(ledYELLOW);
+    change_mode();
+    analogWrite(ledYELLOW1, LOW);
+    delay(100);
+    change_mode();
+    break;
+  case 5:
+    //fade blue+yellow
+    analogWrite(ledYELLOW, 255);
+    delay(100);
+    fade_led(ledBLUE);
     change_mode();
     analogWrite(ledYELLOW, LOW);
     delay(100);
