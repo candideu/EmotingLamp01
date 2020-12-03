@@ -24,9 +24,9 @@ Inputs to update
 //**Details of your local Wifi Network
 
 //Name of your access point
-char ssid[] = "LAN_Solo_02";
+char ssid[] = "WIFI";
 //Wifi password
-char pass[] = "payfirst1234";
+char pass[] = "PASSWORD";
 
 // channel and ID data
 const char* myID = "Nairobi"; // place your name here, this will be put into your "sender" value for an outgoing messsage
