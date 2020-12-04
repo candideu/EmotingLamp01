@@ -1,4 +1,4 @@
-    //fade_led:  takes an int as input indicating which PWM pin to perform one fade cycle
+  //fade_led:  takes an int as input indicating which PWM pin to perform one fade cycle
   //Arguements: int led
   //Returns:  none
     void fade_led(int led){
@@ -23,10 +23,10 @@
   /*change_mode:  changes the led flashing mode on button press
   0 = fade red+green=yellow
   1 = fade green+blue=cyan
-  2 =  fade blue+red=purple
-  3 = fade yellow+red=orange
-  4 = fade red
-  5 = fade blue+yellow
+  2 = fade blue+yellow=green
+  3 = fade blue+red=purple
+  4 = fade yellow+red=orange
+  5 = fade yellow
   Arguements: none
   Returns: none */
 
