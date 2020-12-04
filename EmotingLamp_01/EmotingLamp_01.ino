@@ -1,5 +1,5 @@
 /**
-Experiment 5: Moodlamp - Canada//Kenya.
+Experiment 5: Emotinglamp - Canada//Kenya.
 ****Storage and Playback enabled on sub/pub keys*****
 2 channel setup
 -publish on one channel
@@ -104,11 +104,11 @@ sendReceiveMessages(serverCheckRate);
 switch (Mode){
   case 0:
      //fade red+green=yellow
-    analogWrite(ledGREEN, 255);
+    analogWrite(ledRED, 255);
     delay(100);
-    fade_led(ledRED);
+    fade_led(ledGREEN);
     change_mode();
-    analogWrite(ledGREEN, LOW);
+    analogWrite(ledRED, LOW);
     delay(100);
     change_mode();
     break;
