@@ -93,7 +93,7 @@ void setup() {
   // declare input pin for the pushbutton :
   pinMode(buttonPin, INPUT);
 
-  Serial.begin(9600);
+
 }
 
 void loop() {
